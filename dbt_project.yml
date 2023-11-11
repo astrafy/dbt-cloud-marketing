@@ -36,7 +36,5 @@ models:
   js_marketing_dbt_cl:
     staging:
       +materialized: table
-    intermediate:
-      +materialized: table
     datamart:
       +materialized: table
