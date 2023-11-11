@@ -1,5 +1,7 @@
 models:
   - name: customers
+    access: protected
+    group: marketing
     description: Customer overview data mart, offering key details for each unique customer. One row per customer.
     columns:
       - name: customer_id
