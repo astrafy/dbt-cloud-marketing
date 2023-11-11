@@ -1,5 +1,7 @@
 models:
-  - name: stg_locations
+  - name: locations
+    access: protected
+    group: marketing
     description: List of open locations with basic cleaning and transformation applied, one row per location.
     columns:
       - name: location_id
@@ -12,7 +14,7 @@ semantic_models:
   - name: locations
     description: |
       Location dimension table. The grain of the table is one row per location.
-    model: ref('stg_locations')
+    model: ref('locations')
     defaults:
       agg_time_dimension: opened_at
     entities:
