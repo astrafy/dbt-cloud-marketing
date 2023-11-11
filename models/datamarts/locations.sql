@@ -2,7 +2,7 @@ with
 
 locations as (
 
-    select * from {{ ref('jaffle_shop_mesh_platform', 'stg_locations') }}
+    select * from {{ ref('js_platform_dbt_cl', 'stg_locations') }}
 
 )
 

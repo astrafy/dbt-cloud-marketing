@@ -1,3 +1,3 @@
 projects:
-  - name: platform
-  - name: finance
+  - name: js_platform_dbt_cl
+  - name: js_finance_dbt_cl
