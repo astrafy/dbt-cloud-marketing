@@ -38,5 +38,5 @@ models:
       +materialized: table
     intermediate:
       +materialized: table
-    datamarts:
+    datamart:
       +materialized: table
