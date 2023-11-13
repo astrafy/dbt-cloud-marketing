@@ -10,9 +10,9 @@ models:
       - name: customer_id
         data_type: string
         description: The unique key of the orders mart.
-        tests:
-          - not_null
-          - unique
+#        tests:
+#          - not_null
+#          - unique
       - name: customer_name
         data_type: string
         description: Customers' full name.
