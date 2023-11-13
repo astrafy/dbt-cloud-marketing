@@ -34,6 +34,7 @@ quoting:
 
 models:
   js_marketing_dbt_cl:
+    +tags: js_marketing_dbt_cl
     staging:
       +materialized: table
     datamart:
