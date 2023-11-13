@@ -2,19 +2,19 @@ with
 
 customers as (
 
-    select * from {{ ref('stg_customers') }}
+    select * from {{ ref('js_platform_dbt_cl', 'stg_customers') }}
 
 ),
 
 orders_table as (
 
-    select * from {{ ref('orders') }}
+    select * from {{ ref('js_finance_dbt_cl', 'orders') }}
 
 ),
 
 order_items_table as (
 
-    select * from {{ ref('order_items') }}
+    select * from {{ ref('js_finance_dbt_cl', 'order_items') }}
 ),
 
 order_summary as (
