@@ -2,7 +2,7 @@ with
 
 customers as (
 
-    select * from {{ ref('js_platform_dbt_cl', 'stg_customers') }}
+    select * from {{ ref('js_platform_dbt_cl', 'dm_customers') }}
 
 ),
 
