@@ -1,9 +1,10 @@
 name: "js_marketing_dbt_cl"
 version: "2.1.0"
 config-version: 2
-
+dbt-cloud:
+    project-id: 314311
 profile: "default"
-require-dbt-version: [ ">=1.6.0", "<2.0.0" ]
+require-dbt-version: ">=1.6.0"
 
 model-paths: [ "models" ]
 analysis-paths: [ "analyses" ]
@@ -21,21 +22,13 @@ vars:
   truncate_timespan_to: "{{ current_timestamp() }}"
   "dbt_date:time_zone": "America/Los_Angeles"
 
-
-query-comment:
-  comment: "{{ common.query_comment(node) }}"
-  job-label: True
-
-
-quoting:
-  database: true
-  schema: true
-  identifier: true
+seeds:
+  +tags: js_marketing_dbt_cl
 
 models:
+  +tags: js_marketing_dbt_cl
   js_marketing_dbt_cl:
-    +tags: js_marketing_dbt_cl
     staging:
-      +materialized: table
+      +materialized: view
     datamart:
       +materialized: table
